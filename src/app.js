@@ -62,20 +62,21 @@ function rebutton()
 }
 
 var xPos=0;
-addEventListener("touchstart", down,true);
-addEventListener("touchend", up,true);
+addEventListener("touchstart", down);
+addEventListener("touchend", up);
 addEventListener("mousedown", down);
 addEventListener("mouseup",up);
 
 function down(event){
    if(event.path[0].className!='searchBox'){
-    xPos=event.pageX;
+    xPos=event.pageX||event.originalEvent.touches[0].pageX;
     event.preventDefault();
   }
 }
 function up(event){
   if(event.path[0].className!='searchBox'){
-  var vector=(event.pageX-xPos)/Math.abs(event.pageX-xPos);
+  let X=event.pageX||event.originalEvent.touches[event.originalEvent.touches.length-1].pageX;
+  let vector=(X-xPos)/Math.abs(X-xPos);
   if(vector<0)
   {
     if(curTable<(tablecnt-tableCap))
