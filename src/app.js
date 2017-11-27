@@ -62,13 +62,18 @@ function rebutton()
 }
 
 var xPos=0;
-addEventListener("mousedown", function(event){
-  if(event.path[0].className!='searchBox'){
+addEventListener("touchdown", down);
+addEventListener("touchup", up;
+addEventListener("mousedown", down);
+addEventListener("mouseup",up);
+
+function down(event){
+   if(event.path[0].className!='searchBox'){
     xPos=event.pageX;
     event.preventDefault();
   }
-});
-addEventListener("mouseup", function(event){
+}
+function up(event){
   if(event.path[0].className!='searchBox'){
   var vector=(event.pageX-xPos)/Math.abs(event.pageX-xPos);
   if(vector<0)
@@ -89,7 +94,7 @@ addEventListener("mouseup", function(event){
     }
   }
 }
-});
+}
 
 
 
