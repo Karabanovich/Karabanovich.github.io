@@ -63,7 +63,7 @@ function rebutton()
 
 var xPos=0;
 addEventListener("touchstart", down);
-addEventListener("touchend", up;
+addEventListener("touchend", up);
 addEventListener("mousedown", down);
 addEventListener("mouseup",up);
 
