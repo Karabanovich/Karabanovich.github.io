@@ -75,7 +75,6 @@ function down(event){
 }
 function up(event){
   if(event.path[0].className!='searchBox'){
-    console.log(event);
   let X=event.pageX||event.changedTouches[event.changedTouches.length-1].pageX;
   let vector=(X-xPos)/Math.abs(X-xPos);
   if(vector<0)
