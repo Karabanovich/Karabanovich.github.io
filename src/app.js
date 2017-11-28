@@ -68,13 +68,13 @@ addEventListener("mousedown", down);
 addEventListener("mouseup",up);
 
 function down(event){
-   if(event.path[2].className!='search'){
+   if(event.path[2].className!='search'&&event.path[0].className!='searchBox'){
     xPos=event.pageX||event.touches[0].pageX;
     event.preventDefault();
   }
 }
 function up(event){
-  if(event.path[2].className!='search'){
+  if(event.path[2].className!='search'&&event.path[0].className!='searchBox'){
   let X=event.pageX||event.changedTouches[event.changedTouches.length-1].pageX;
   let vector=(X-xPos)/Math.abs(X-xPos);
   if(vector<0)
