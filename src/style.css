@@ -10,6 +10,7 @@ html, body{
     padding:0;
 }
 body{
+	touch-action: none;
     background-color: rgb(35, 35, 45);
 }
 
