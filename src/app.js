@@ -62,8 +62,8 @@ function rebutton()
 }
 
 var xPos=0;
-addEventListener("touchstart", down);
-addEventListener("touchend", up);
+addEventListener("touchstart", down,{ passive: false });
+addEventListener("touchend", up,{ passive: false });
 addEventListener("mousedown", down);
 addEventListener("mouseup",up);
 
